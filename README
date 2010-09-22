@@ -4,3 +4,4 @@ Collection of RHEL(centos) and UNIX Admin scripts
 10passage.sh	: Cronjob sends email to users to inform of passwd expiration
 disservices.pl	: Disable unnecessary services in RHEL(CentOS)
 README 		: This file
+diffck.pl	: Code example compare data between two hashes
