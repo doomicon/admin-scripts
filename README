@@ -1,2 +1,6 @@
 Collection of RHEL(centos) and UNIX Admin scripts
 ~doomicon
+
+10passage.sh	: Cronjob sends email to users to inform of passwd expiration
+disservices.pl	: Disable unnecessary services in RHEL(CentOS)
+README 		: This file
