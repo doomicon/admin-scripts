@@ -6,3 +6,6 @@ disservices.pl	: Disable unnecessary services in RHEL(CentOS)
 README 		: This file
 diffck.pl	: Code example compare data between two hashes
 searchindex.sh  : Script to reindex the WebLogic 6.1 Search Service (ALUI)
+wlstinit.sh	: Simple script for starting wlst cli for weblogic
+sscan.pl	: Quick portscanner for testing firewall rules
+passpol.pl	: Linux Password Policy email notice job
