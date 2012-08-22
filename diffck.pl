@@ -11,6 +11,9 @@
 ##Change##
 #initial:ro:/12/1?/09
 
+#$NFSF="nfsu301.out";
+#$ORAD="ora02u30.out";
+#$NSFF="nfsstand.out";
 $ORAD="orastand.out";
 
 

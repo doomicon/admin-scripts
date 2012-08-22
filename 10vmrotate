@@ -1,0 +1,30 @@
+#!/bin/bash
+# name:  10vmrotate
+# desc:  rotate/rm output generatred from /etc/cron.hourly/10vmstat
+# auth:  owensro
+# 120809/owensro, rewritten for reusability.  Place in /etc/cron.daily
+#  this will maintain n days worth of data
+
+Date=`date +%m%d%y`
+DataDir=$HOME/vmstat
+DataFile=$DataDir/usage.out
+
+backupdata ()
+{
+	age=$1
+	dest=$2
+	if [ -f $DataFile.$1 ]
+		then mv $DataFile.$age $DataFile.$dest
+	fi
+}
+
+for i in  13 12 11 10 9 8 7 6 5 4 3 2 1
+do
+	new=`expr $i + 1`
+	backupdata $i $new
+done	
+
+if [ -f $DataFile ]
+	then mv $DataFile $DataFile.1
+	touch $DataFile
+fi
