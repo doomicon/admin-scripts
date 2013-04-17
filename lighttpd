@@ -32,7 +32,7 @@ RETVAL=0
 start() {
 	echo -n $"Starting $prog: "
 	# Check that /var/log/lighttd NFS mount exists before starting.
-	grep ^tpap /etc/mtab|grep lighttpd -q;if [ $? -ne 0 ];then echo "NFS Logs not mounted";fi
+	grep ^hostname /etc/mtab|grep lighttpd -q;if [ $? -ne 0 ];then echo "NFS Logs not mounted";fi
 	daemon $lighttpd -f $LIGHTTPD_CONF_PATH
 	RETVAL=$?
 	echo
