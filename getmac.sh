@@ -1,13 +1,7 @@
 #!/bin/bash
-#Name: getmac.sh
-#Desc: remotely gather macs.
-#Author: Rob Owens
-##Change##
-#initial:ro:/04/17/13
-
-MACS="./prodbmac.out"
-#MACS="./devdb.out"
-declare -a hosts=(`cat prodb.txt`)
+# remotely get mac
+MACS="./MAC.out"
+declare -a hosts=(`cat hostlist.txt`)
 
 for host in "${hosts[@]}";do
 
