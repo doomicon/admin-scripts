@@ -13,5 +13,5 @@ freeconn=$(expr $connall - $connused)
 
 if [ "$freeconn" -le 2 ]
 then
-  echo "$(hostname -f):  JVM JDBC Pool getting low: Remaining: $freeconn Connections" | mail -s "Wildfly Heap Alert" serve-linuxadmins@aexp.com
+  echo "$(hostname -f):  JVM JDBC Pool getting low: Remaining: $freeconn Connections" | mail -s "Wildfly Heap Alert" emailaddr@fqdn.dom
 fi
