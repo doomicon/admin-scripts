@@ -15,5 +15,5 @@ freememory=$(expr $heapmax - $heapused)
 
 if [ "$freememory" -le 128000000 ]
 then
-  echo "$(hostname -f):  JVM Heap memory getting low: Remaining: $freememory bytes" | mail -s "Wildfly Heap Alert" serve-linuxadmins@aexp.com
+  echo "$(hostname -f):  JVM Heap memory getting low: Remaining: $freememory bytes" | mail -s "Wildfly Heap Alert" emailaddr@fqdn.dom
 fi
