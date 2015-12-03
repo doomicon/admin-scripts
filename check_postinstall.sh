@@ -184,7 +184,7 @@ fi
 
 #Email only in case of failure
 if [ -s $EmailBody ]
-       then mail -s "PostInstall:  $(hostname -f)" Serve-Linux-Admins@aexp.com < $EmailBody
+       then mail -s "PostInstall:  $(hostname -f)" emailaddr@fqdn.dom < $EmailBody
 fi
 
 # Last Update Testing
