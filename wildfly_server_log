@@ -1,0 +1,18 @@
+# file controlled by puppet hieradata/files/scripts/wildfly-server-log
+# logrotate.d for wildfly server.log
+/var/log/wildfly/log/server.log.????-??-?? {
+    compress
+    compresscmd /usr/bin/gzip
+    nocreate
+    nodateext
+    ifempty
+    missingok
+    rotate 1
+    size 0
+    start 0
+#    su jboss jboss
+    lastaction
+        # Remove rotated files older than 30 days
+        find /var/log/wildfly/log/ -name 'server.log.????-??-??.0.gz' -mtime +30 -exec rm {} \;
+    endscript
+}
